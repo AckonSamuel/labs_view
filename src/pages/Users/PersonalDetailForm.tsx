@@ -17,7 +17,7 @@ export const PersonalDetailForm: React.FC<Props & InjectedFormProps<{}, Props>> 
 
     const handleChange = (event: any) => {
         var birthYear = event.target.value.slice(0, 4);
-        var currentYear: any = CurrentDate.slice(0. 4);
+        var currentYear: any = CurrentDate.slice(0, 4);
         var userAge = currentYear - birthYear;
         props.dispatch(change('user', 'userAge', userAge));
     }

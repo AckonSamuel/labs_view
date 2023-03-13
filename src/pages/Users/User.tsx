@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import Form from './Form';
-import { addUser } from '../../redux/actions/user/add';
-import { reset } from 'redux-form';
+import {Form} from './Form';
+// import { addUser } from '../../redux/actions/user/add';
+// import { reset } from 'redux-form';
 
 export const User = (props: any) => {
     const [isLoading, setLoading] = useState(false);

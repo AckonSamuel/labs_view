@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { InjectedFormProps } from 'redux-form';
-import Stepper from 'react-stepper-horizontal';
+import { Stepper } from 'react-form-stepper';
 import Card from '@mui/material/Card';
 import AccountDetailForm from './AccountDetailForm';
 import PersonalDetailForm from './PersonalDetailForm';
 
 export const Form: React.FC<InjectedFormProps> = (props: any) => {
     const [page, setPage] = useState(0);
-    const steps = [{ title: 'Personal Details'}, { title: 'Account Detail'}];
+    const steps = [{ label: 'Personal Details'}, { label: 'Account Detail'}];
 
     const { onSubmit, isLoading } = props;
 
