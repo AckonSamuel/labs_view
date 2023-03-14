@@ -9,6 +9,7 @@ export const User = (props: any) => {
 
     const handleSubmit = (values: any) => {
         console.log('values', values);
+        setLoading(true);
         // props.dispatch(addUser(values));
         // props.dispatch(reset('user'));
     }

@@ -8,17 +8,17 @@ import validate from './validate';
 import ReduxFormSelect from '../../components/ReduxFormSelect';
 import { Gender, CurrentDate } from '../../config/constants';
 import { name, mobile } from '../../lib/normalize';
-import '../../styles/reduxformjest.css';
+// import '../../styles/reduxformjest.css';
 
-interface Props { };
+interface Props { }
 
 export const PersonalDetailForm: React.FC<Props & InjectedFormProps<{}, Props>> = (props: any) => {
     const { handleSubmit } = props;
 
     const handleChange = (event: any) => {
-        var birthYear = event.target.value.slice(0, 4);
-        var currentYear: any = CurrentDate.slice(0, 4);
-        var userAge = currentYear - birthYear;
+        const birthYear = event.target.value.slice(0, 4);
+        const currentYear: any = CurrentDate.slice(0, 4);
+        const userAge = currentYear - birthYear;
         props.dispatch(change('user', 'userAge', userAge));
     }
 
@@ -87,8 +87,7 @@ export const PersonalDetailForm: React.FC<Props & InjectedFormProps<{}, Props>> 
                                 <Field 
                                 name="userMobileNumber"
                                 type="text"
-                                datas={Gender}
-                                component={ReduxFormSelect}
+                                component={ReduxFormInput}
                                 label="Mobile No *"
                                 placeHolder="Enter Mobile Number"
                                 normalize={mobile}
